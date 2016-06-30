@@ -1,0 +1,90 @@
+body, html {
+	background: white;
+}
+
+body {
+	margin-top: 0;
+}
+
+body p, ul {
+	color: #333;
+	font-family: 'Metrophobic', Arial, serif; font-weight: 400;
+}
+
+svg {
+	display: block;
+	margin: 0 auto;
+}
+
+.text-1 {
+  animation: hideshow 1s ease 2.5s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes hideshow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  80% { opacity: .5; }
+  100% { opacity: 1; }
+} 
+
+.red-line {
+	opacity: 0;
+	animation: fade 1s ease-in-out 2.5s 1 forwards;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 
+
+.globe {
+	animation: globe 1s linear 2s 1 forwards;
+	/*transform: translateY(-300px);*/
+	opacity: 0;
+}
+
+@keyframes globe {
+	0% {
+		transform: scale(0);
+	}
+ 70% {
+		opacity: 1;
+		transform: scale(1.1);
+  }
+  71% {
+    transform: scale(1.1);
+  }
+  85% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 1;
+  }
+}
+
+
+.flash-group {
+  animation: svg 2s ease alternate 1  2s forwards;
+  transform: translateY(-600px);
+}
+
+
+@keyframes svg {
+  0% {
+    transform: translateY(-600px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
